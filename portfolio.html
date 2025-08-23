@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="finalstyles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.css" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
+</head>
+<body style="display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;">
+  <div class="navbar">
+    <h1>Crypto Price Tracker</h1>
+    <nav>
+      <a href="final.html">Coins</a>
+      <a href="portfolio.html">Portfolio</a>
+      <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+  </div>
+
+  <div class="portcontainer">
+    <h2 style="text-align: center;" class="yourportfolio"><u>Your Portfolio</u></h2>
+
+    <form id="portfolio-form">
+      <label for="portfolio-coin-select">Select Coin:</label>
+      <select id="portfolio-coin-select" placeholder="e.g., bitcoin, ethereum..."></select>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" step="any" required />
+
+      <button class="add" type="submit">Add to Portfolio</button>
+
+      
+      <button id="refresh-btn" type="button">Refresh Price</button>
+
+    </form>
+
+    
+    <div class="scroll-area">
+      <div id="portfolio-list" class="coin-list"></div>
+    </div>
+    <div class="portcrypto-card"></div>
+
+
+    
+    
+    
+
+  </div>
+
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    function setTheme(mode) {
+      document.body.className = mode;
+      localStorage.setItem('theme', mode);
+      themeToggleBtn.textContent = mode === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+    }
+    function toggleTheme() {
+      const current = document.body.className;
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    }
+    themeToggleBtn.addEventListener('click', toggleTheme);
+    (function initTheme() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(saved || (prefersDark ? 'dark' : 'light'));
+    })();
+  </script>
+  <script src="portfolio.js"></script>
+</body>
+</html>
+!

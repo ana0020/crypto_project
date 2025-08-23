@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Tracker</title>
+  <link rel="stylesheet" href="finalstyles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.3.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <h1>Crypto Price Tracker</h1>
+    <nav>
+      <a href="final.html">Coins</a>
+      <a href="portfolio.html">Portfolio</a>
+       <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+
+    </nav>
+  </div>
+
+  <div class="container">
+    
+    <div class="controls">
+  <label class="search" for="coin-select" style=" font-weight:bolder;">Search for a coin:</label>
+  <select id="coin-select" placeholder="bitcoin, 108, btc..."></select>
+
+  <!-- Range Selector (NO duplicate class!) -->
+  <fieldset class="range-selector">
+    <legend>Select Time Range</legend>
+    <button data-range="1">1D</button>
+    <button data-range="7" class="active">7D</button>
+    <button data-range="30">30D</button>
+   
+ <button data-range="180">6M</button>
+    <button data-range="365">1Y</button>
+  </fieldset>
+
+  <!-- Chart Type Selector -->
+  <div class="chart-type-selector">
+    <button data-type="line" class="chart-btn active">Line</button>
+    <button data-type="bar" class="chart-btn">Bar</button>
+    <button data-type="area" class="chart-btn">Area</button>
+  </div>
+</div>
+</div>
+
+    <div id="coin-list" class="coin-list"></div>
+
+    <div id="chart-section" class="center-chart" style="display: none;">
+      <div class="crypto-card">
+        <h2 id="coin-title"></h2>
+        <div class="chart-container">
+          <canvas id="coin-chart"></canvas>
+        </div>
+        <button class="back-button" onclick="goBack()">⬅ Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="finalscript.js"></script>
+</body>
+</html>
+
