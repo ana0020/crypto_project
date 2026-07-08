@@ -66,5 +66,36 @@ No additional installation or dependencies are required.
 
 ## Screenshots
 
+-HOME PAGE
+
 <img width="1879" height="1003" alt="image" src="https://github.com/user-attachments/assets/105fdb32-11d4-4e6b-8030-41804c750b98" />
+
+-CHART PAGE
+
+<img width="1894" height="953" alt="image" src="https://github.com/user-attachments/assets/9e7d7b3b-8b27-49fc-91ef-7203020029be" />
+
+-PORTFOLIO PAGE
+
+<img width="1882" height="933" alt="image" src="https://github.com/user-attachments/assets/dfcb8df3-1cd6-4834-97d1-bdbea115d92c" />
+
+## Future Improvements
+
+- Add user authentication
+- Store portfolio data using a database
+- Improve UI with advanced data visualization
+
+## Learning Outcomes
+
+Through this project, I gained experience in:
+
+- Working with APIs and asynchronous JavaScript
+- Handling dynamic data rendering
+- Creating responsive web pages
+- Managing multiple JavaScript files
+- Building interactive frontend applications
+
+## Author
+
+Ananya Sethi
+
 
