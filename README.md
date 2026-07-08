@@ -56,9 +56,7 @@ Follow these steps to run the project locally:
 
 1. Clone the repository:
 
-
-git clone YOUR_GITHUB_REPOSITORY_LINK
-
+git clone https://github.com/ana0020/crypto_project.git
 
 2. Navigate to the project folder.
 
@@ -67,3 +65,6 @@ git clone YOUR_GITHUB_REPOSITORY_LINK
 No additional installation or dependencies are required.
 
 ## Screenshots
+
+<img width="1879" height="1003" alt="image" src="https://github.com/user-attachments/assets/105fdb32-11d4-4e6b-8030-41804c750b98" />
+
